@@ -1,0 +1,72 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = CplusPei
+  FILE_GUID                      = 07F89FDD-699E-497e-A3C0-B4912880C3D5
+  MODULE_TYPE                    = PEIM
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = CplusPeiInit
+
+[Sources]
+  CplusPei.cpp
+  CplusPei.h
+  operator.cpp
+  operator.h
+  object.cpp
+  object.h
+  cpu.cpp
+  cpu.h
+  io.cpp
+  io.h
+  memory.cpp
+  memory.h
+  msr.cpp
+  msr.h
+  pci.cpp
+  pci.h
+  sio.cpp
+  sio.h
+  smbus.cpp
+  smbus.h
+  spd.cpp
+  spd.h
+  acpi.cpp
+  acpi.h
+  smbios.cpp
+  smbios.h
+  spi.cpp
+  spi.h
+  flash.cpp
+  flash.h
+  manufactory.cpp
+  manufactory.h
+  asus.cpp
+  asus.h
+  apple.cpp
+  apple.h
+  intel.cpp
+  intel.h
+  ibm.cpp
+  ibm.h
+  google.cpp
+  google.h
+  microsoft.cpp
+  microsoft.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  CplusPkg/CplusPkg.dec
+
+[LibraryClasses]
+  PeimEntryPoint
+  IoLib
+  PciLib
+  
+[Ppis]
+  gEfiPeiReadOnlyVariable2PpiGuid 
+  
+[Pcd]
+   gEfiCplusTokenSpaceGuid.PcdCplusFeatureFlag
+
+[Depex]
+  TRUE 		#MdePkg.dec
+	 

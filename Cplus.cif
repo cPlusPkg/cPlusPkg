@@ -1,0 +1,12 @@
+<component>
+  name = "CplusPkg"
+  category = eBoard
+  LocalRoot = "CplusPkg\"
+  RefName = "CplusLib"
+[INF]
+  "CplusPei.inf"
+  "CplusDxe.inf"
+[files]
+  "Cplus.sdl"
+  "CplusPkg.dec"
+<endComponent>

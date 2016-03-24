@@ -1,0 +1,78 @@
+#**********************************************************************
+#**********************************************************************
+#**                                                                  **
+#**        (C)Copyright 1985-2010, American Megatrends, Inc.         **
+#**                                                                  **
+#**                       All Rights Reserved.                       **
+#**                                                                  **
+#**      5555 Oakbrook Parkway, Suite 200, Norcross, GA 30093        **
+#**                                                                  **
+#**                       Phone: (770)-246-8600                      **
+#**                                                                  **
+#**********************************************************************
+#**********************************************************************
+
+[Defines]
+	INF_VERSION 		=  0x00010005
+	VERSION_STRING  	=  1.0
+	BASE_NAME  			=  CplusDxe
+	FILE_GUID			=  71FEF673-9E92-4d6c-8A52-774B8D3C030D
+	MODULE_TYPE         =  DXE_DRIVER
+	ENTRY_POINT			=  CplusDxeDriverEntryPoint
+
+[Sources]
+  CplusDxe.cpp
+  CplusDxe.h
+  operator.cpp
+  operator.h
+  object.cpp
+  object.h
+  cpu.cpp
+  cpu.h
+  io.cpp
+  io.h
+  memory.cpp
+  memory.h
+  msr.cpp
+  msr.h
+  pci.cpp
+  pci.h
+  sio.cpp
+  sio.h
+  smbus.cpp
+  smbus.h
+  spd.cpp
+  spd.h
+  acpi.cpp
+  acpi.h
+  smbios.cpp
+  smbios.h
+  spi.cpp
+  spi.h
+  flash.cpp
+  flash.h
+  manufactory.cpp
+  manufactory.h
+  asus.cpp
+  asus.h
+  apple.cpp
+  apple.h
+  intel.cpp
+  intel.h
+  ibm.cpp
+  ibm.h
+  google.cpp
+  google.h
+  microsoft.cpp
+  microsoft.h
+      
+[Packages]
+  MdePkg/MdePkg.dec
+  CplusPkg/CplusPkg.dec 
+   
+[LibraryClasses]
+  UefiDriverEntryPoint
+  IoLib
+  
+[Depex]
+  TRUE

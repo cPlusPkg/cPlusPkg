@@ -1,0 +1,30 @@
+
+TOKEN
+	Name  = "CplusPkg_SUPPORT"
+	Value  = 1
+	Help  = "Main switch to enable CplusPkg code support in Cplus"
+	TokenType = Boolean
+	TargetEQU = Yes
+	TargetMAK = Yes
+	Master = Yes
+End
+
+PATH
+	Name  = "Cplus_DIR"
+End
+
+INFComponent
+	Name  = "CplusPei"
+	File  = "CplusPei.inf"
+	Package  = "CplusPkg"
+	ModuleTypes  = "PEIM"
+	Token = "CplusPkg_SUPPORT" "=" "1"
+End
+
+INFComponent
+	Name  = "CplusDxe"
+	File  = "CplusDxe.inf"
+	Package  = "CplusPkg"
+	ModuleTypes  = "DXE_DRIVER"
+	Token = "CplusPkg_SUPPORT" "=" "1"
+End
